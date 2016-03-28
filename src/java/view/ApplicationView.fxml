@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.Border?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="controller.ApplicationController">
-	<!-- TODO Add Nodes -->
-</BorderPane>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400"
+	prefWidth="360" fx:controller="controller.ApplicationController">
+
+
+	<padding>
+		<Insets top="5" right="5" bottom="30" left="5" />
+	</padding>
+
+	<GridPane vgap="40" hgap="10" layoutX="10" layoutY="60">
+		<Label text="QUANTIDADE EM DOLAR $U" GridPane.columnIndex="0"
+			GridPane.rowIndex="0" />
+		<TextField GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="170" />
+
+		<Label text="VALOR DO DOLAR EM Real (R$)" GridPane.columnIndex="0"
+			GridPane.rowIndex="1" />
+		<TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+		<Label text="Dolar para Real" GridPane.columnIndex="0"
+			GridPane.rowIndex="2" />
+
+		<Label text="Real para Dolar" GridPane.columnIndex="1"
+			GridPane.rowIndex="2" />
+	</GridPane>
+
+	<Rectangle layoutX="10" layoutY="210" fill="TRANSPARENT" stroke="BLACK"
+		height="120" width="170" />
+		
+		<Label text="valor Real" layoutX="65" layoutY="260" />
+
+	<Rectangle layoutX="190" layoutY="210" fill="TRANSPARENT"
+		stroke="BLACK" height="120" width="170" />
+		
+	<Label text="valor Dolar" layoutX="245" layoutY="260" />
+
+	<HBox spacing="10" alignment="CENTER" layoutY="380" layoutX="60">
+		<Button text="CALCULE" prefWidth="80" />
+		<Button text="LIMPAR" prefWidth="80" />
+		<Button text="SAIR" prefWidth="80" />
+	</HBox>
+</AnchorPane>
