@@ -21,11 +21,11 @@
 	<GridPane vgap="40" hgap="10" layoutX="10" layoutY="60">
 		<Label text="QUANTIDADE EM DOLAR $U" GridPane.columnIndex="0"
 			GridPane.rowIndex="0" />
-		<TextField GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="170" />
+		<TextField fx:id="txtDolar" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="170" />
 
 		<Label text="VALOR DO DOLAR EM Real (R$)" GridPane.columnIndex="0"
 			GridPane.rowIndex="1" />
-		<TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+		<TextField fx:id="txtReal" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
 		<Label text="Dolar para Real" GridPane.columnIndex="0"
 			GridPane.rowIndex="2" />
@@ -37,16 +37,16 @@
 	<Rectangle layoutX="10" layoutY="210" fill="TRANSPARENT" stroke="BLACK"
 		height="120" width="170" />
 		
-		<Label text="valor Real" layoutX="65" layoutY="260" />
+		<Label fx:id="lblReal" text="valor Real" layoutX="65" layoutY="260" />
 
 	<Rectangle layoutX="190" layoutY="210" fill="TRANSPARENT"
 		stroke="BLACK" height="120" width="170" />
 		
-	<Label text="valor Dolar" layoutX="245" layoutY="260" />
+	<Label fx:id="lblDolar" text="valor Dolar" layoutX="245" layoutY="260" />
 
 	<HBox spacing="10" alignment="CENTER" layoutY="380" layoutX="60">
-		<Button text="CALCULE" prefWidth="80" />
-		<Button text="LIMPAR" prefWidth="80" />
-		<Button text="SAIR" prefWidth="80" />
+		<Button text="CALCULE" prefWidth="80" onAction="#handleCalcular" />
+		<Button text="LIMPAR" prefWidth="80" onAction="#hendleClear" />
+		<Button text="SAIR" prefWidth="80" onAction="#handleSair" />
 	</HBox>
 </AnchorPane>
